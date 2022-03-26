@@ -1,14 +1,21 @@
 #background {
-    height: 2194px;
-    width: 2951px;
     background-image:  url(./img/night_tukuyomichan.jpg);
+    background-repeat: no-repeat;
     background-size: contain;
 }
 
 .panel {
-    width: 310px;
+    width: 620px;
     height: 340px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 手前のカードを下に下げる */
+.bottom {
+    display: flex;
+    align-items: flex-end;
 }
 
 .card {
