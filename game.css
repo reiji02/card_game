@@ -1,3 +1,10 @@
+#background {
+    height: 2194px;
+    width: 2951px;
+    background-image:  url(./img/night_tukuyomichan.jpg);
+    background-size: contain;
+}
+
 .panel {
     width: 310px;
     height: 340px;
