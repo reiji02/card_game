@@ -45,14 +45,14 @@ window.onload = function(){
         div.index = i;
         div.number = arr[i];
         div.innerHTML = '';
-        div.onclick = select;
+        div.onclick = spaceSelect;
         player1_hand_panel.appendChild(div);
         card_spaces.push(div);
 
         var card = document.createElement('div');
         card.id = 'player1_hand_panel_card_'+(i+1)
         card.className = 'card';
-        card.onclick = select;
+        card.onclick = cardSelect;
 
         setCard(div, card)
     }
@@ -63,7 +63,7 @@ window.onload = function(){
         div.index = i;
         div.number = arr[i];
         div.innerHTML = '';
-        div.onclick = select;
+        div.onclick = spaceSelect;
         player1_monster_panel.appendChild(div);
         card_spaces.push(div);
     }
@@ -73,7 +73,7 @@ window.onload = function(){
     //     div.index = i;
     //     div.number = arr[i];
     //     div.innerHTML = '';
-    //     div.onclick = select;
+    //     div.onclick = cardSelect;
     //     player1_magic_panel.appendChild(div);
     //     card_spaces.push(div);
     // }
@@ -81,9 +81,17 @@ window.onload = function(){
     window.resizeTo(WIDTH*scale, HEIGHT*scale)
 }
 
+// カード置き場クリック時の処理
+function spaceSelect(e){
+    if(e.target.hasChildNodes() == false){
+        alert("カードを置きます")
+    }
+}
+
 // カードクリック時の処理
-function select(){
-    
+function cardSelect(e){
+    e.stopPropagation();
+    alert("カードが選択されました")
 }
 
 function setCard(space, card){
