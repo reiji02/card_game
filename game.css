@@ -4,6 +4,31 @@
     background-size: contain;
 }
 
+.empty_panel {
+    width: 620px;
+    height: 80px;
+}
+
+#player1_hand_panel {
+    display: flex;
+    justify-content: center; 
+    width: 620px;
+    height: 80px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#player1_monster_panel {
+    display: flex;
+    justify-content: center; 
+    width: 620px;
+    height: 80px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .panel {
     width: 620px;
     height: 340px;
@@ -18,11 +43,26 @@
     align-items: flex-end;
 }
 
-.card {
+.card_space {
     width: 60px;
     height: 80px;
     line-height: 80px;
     border: 1px solid silver;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: gray 2px 2px;
+    background: white;
+    float: left;
+    margin: 2px;
+
+}
+
+.card {
+    width: 50px;
+    height: 70px;
+    line-height: 80px;
+    border: 1px solid black;
     border-radius: 10px;
     text-align: center;
     font-size: 26px;
@@ -31,4 +71,10 @@
     background: white;
     float: left;
     cursor: pointer;
+    
+    margin: 2px;
+}
+
+#player1_hand_panel.card {
+    background: black;
 }
